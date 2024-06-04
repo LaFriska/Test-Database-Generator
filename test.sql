@@ -1,0 +1,1 @@
+INSERT INTO course (ccode, name, level) VALUES ('COMP2400', 'Relational Databases', 2000);
