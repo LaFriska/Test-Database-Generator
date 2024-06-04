@@ -77,16 +77,25 @@ for i in range(len(tutors)):
 
 def addRandomisedTeach(year, sem):
     for course in courses:
+        flag = True
         if len(course["CourseCode"]) > 8:
-            return
-        convNum = util.getRandomConvenerNum()
-        tutorNum = util.getRandomTutorNum()
-        convIDs = random.sample(range(CHeader, CHeader + 1723), convNum)
-        tutorIDs = random.sample(range(THeader, THeader + 1023), tutorNum)
-        for i in range(len(convIDs)):
-            sqlFile.write(f"INSERT INTO teach (uid, ccode, sem, year, role) VALUES ('{convIDs[i]}', '{course["CourseCode"]}', '{sem}', {year}, 'convener');" + "\n")
-        for i in range(len(tutorIDs)):
-            sqlFile.write(f"INSERT INTO teach (uid, ccode, sem, year, role) VALUES ('{tutorIDs[i]}', '{course["CourseCode"]}', '{sem}', {year}, 'tutor');" + "\n")
+            flag = False
+        if sem == 'S1' and "First Semester" not in course["Session"]:
+            flag = False
+        if sem == 'S2' and "Second Semester" not in course["Session"]:
+            flag = False
+        if flag:
+            convNum = util.getRandomConvenerNum()
+            tutorNum = util.getRandomTutorNum()
+            convIDs = random.sample(range(CHeader, CHeader + 1723), convNum)
+            tutorIDs = random.sample(range(THeader, THeader + 1023), tutorNum)
+            for i in range(len(convIDs)):
+                sqlFile.write(
+                    f"INSERT INTO teach (uid, ccode, sem, year, role) VALUES ('{convIDs[i]}', '{course["CourseCode"]}', '{sem}', {year}, 'convener');" + "\n")
+            for i in range(len(tutorIDs)):
+                sqlFile.write(
+                    f"INSERT INTO teach (uid, ccode, sem, year, role) VALUES ('{tutorIDs[i]}', '{course["CourseCode"]}', '{sem}', {year}, 'tutor');" + "\n")
+
 
 addRandomisedTeach(2024, 'S1')
 addRandomisedTeach(2024, 'S2')

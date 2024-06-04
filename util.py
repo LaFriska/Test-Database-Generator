@@ -1,5 +1,4 @@
 import random
-import json
 
 def getCourseLevel(ccode):
     return int(ccode[4]) * 1000
@@ -29,4 +28,3 @@ def getRandomTutorNum():
         return 3
     else:
         return 4
-
