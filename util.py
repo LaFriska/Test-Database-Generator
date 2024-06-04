@@ -9,7 +9,7 @@ def sanitize(input_string):
     return sanitized_string
 
 def getRandomConvenerNum():
-    r = random.randint(1, 10)
+    r = random.randint(1, 100)
     if r <= 50:
         return 1
     elif r <= 75:
@@ -20,7 +20,7 @@ def getRandomConvenerNum():
         return 4
 
 def getRandomTutorNum():
-    r = random.randint(1, 10)
+    r = random.randint(1, 100)
     if r <= 20:
         return 1
     elif r <= 50:
