@@ -19,5 +19,14 @@ def getRandomConvenerNum():
     else:
         return 4
 
-
+def getRandomTutorNum():
+    r = random.randint(1, 10)
+    if r <= 20:
+        return 1
+    elif r <= 50:
+        return 2
+    elif r <= 75:
+        return 3
+    else:
+        return 4
 
