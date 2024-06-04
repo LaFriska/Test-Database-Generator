@@ -46,5 +46,7 @@ for course in courses:
         level = util.getCourseLevel(ccode)
         sqlFile.write(f"INSERT INTO course (ccode, name, level) VALUES ('{ccode}', '{util.sanitize(name)}', {level});" + "\n")
 
+conv = json.load(open("randomConveners.json"))
+
 sqlFile.close()
 
