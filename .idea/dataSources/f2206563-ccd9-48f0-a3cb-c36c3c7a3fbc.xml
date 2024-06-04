@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.52">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>2062</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2095</IntrospectionStateNumber>
       <ServerVersion>16.2</ServerVersion>
       <StartupTime>1717398499</StartupTime>
       <TimeZones>true ACDT
@@ -801,7 +801,7 @@ false Zulu
 14697||10|C|G
 14697||-9223372036854775808|U|G
 14697||10|U|G</Grants>
-      <IntrospectionStateNumber>2062</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2095</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4234,15 +4234,15 @@ false Zulu
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>2062</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-06-04.03:17:29</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>2095</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-06-04.03:54:17</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <table id="265" parent="264" name="course">
-      <ObjectId>16913</ObjectId>
-      <StateNumber>2048</StateNumber>
+      <ObjectId>16947</ObjectId>
+      <StateNumber>2070</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4271,14 +4271,14 @@ false Zulu
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="270" parent="264" name="staff">
-      <ObjectId>16906</ObjectId>
-      <StateNumber>2048</StateNumber>
+      <ObjectId>16940</ObjectId>
+      <StateNumber>2070</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="271" parent="264" name="teach">
-      <ObjectId>16920</ObjectId>
-      <StateNumber>2048</StateNumber>
+      <ObjectId>16954</ObjectId>
+      <StateNumber>2070</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4286,28 +4286,28 @@ false Zulu
       <DasType>char(8)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2047</StateNumber>
+      <StateNumber>2069</StateNumber>
       <TypeId>1042</TypeId>
     </column>
     <column id="273" parent="265" name="name">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>2047</StateNumber>
+      <StateNumber>2069</StateNumber>
       <TypeId>25</TypeId>
     </column>
     <column id="274" parent="265" name="level">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
-      <StateNumber>2047</StateNumber>
+      <StateNumber>2069</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="275" parent="265" name="course_pkey">
       <ColNames>ccode</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16918</ObjectId>
+      <ObjectId>16952</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2047</StateNumber>
+      <StateNumber>2069</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
@@ -4316,10 +4316,10 @@ false Zulu
     </index>
     <key id="276" parent="265" name="course_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16919</ObjectId>
+      <ObjectId>16953</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2047</StateNumber>
-      <UnderlyingIndexId>16918</UnderlyingIndexId>
+      <StateNumber>2069</StateNumber>
+      <UnderlyingIndexId>16952</UnderlyingIndexId>
     </key>
     <check id="277" parent="266" name="courses_session_check">
       <ColNames>session</ColNames>
@@ -4564,22 +4564,22 @@ false Zulu
       <DasType>char(8)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2046</StateNumber>
+      <StateNumber>2068</StateNumber>
       <TypeId>1042</TypeId>
     </column>
     <column id="313" parent="270" name="name">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>2046</StateNumber>
+      <StateNumber>2068</StateNumber>
       <TypeId>25</TypeId>
     </column>
     <index id="314" parent="270" name="staff_pkey">
       <ColNames>uid</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16911</ObjectId>
+      <ObjectId>16945</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2046</StateNumber>
+      <StateNumber>2068</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
@@ -4588,67 +4588,67 @@ false Zulu
     </index>
     <key id="315" parent="270" name="staff_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16912</ObjectId>
+      <ObjectId>16946</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2046</StateNumber>
-      <UnderlyingIndexId>16911</UnderlyingIndexId>
+      <StateNumber>2068</StateNumber>
+      <UnderlyingIndexId>16945</UnderlyingIndexId>
     </key>
     <check id="316" parent="271" name="teach_sem_check">
       <ColNames>sem</ColNames>
-      <ObjectId>16923</ObjectId>
+      <ObjectId>16957</ObjectId>
       <Predicate>(sem = &apos;S1&apos;::bpchar) OR (sem = &apos;S2&apos;::bpchar)</Predicate>
-      <StateNumber>2048</StateNumber>
+      <StateNumber>2070</StateNumber>
     </check>
     <column id="317" parent="271" name="uid">
       <DasType>char(8)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2048</StateNumber>
+      <StateNumber>2070</StateNumber>
       <TypeId>1042</TypeId>
     </column>
     <column id="318" parent="271" name="ccode">
       <DasType>char(8)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>2048</StateNumber>
+      <StateNumber>2070</StateNumber>
       <TypeId>1042</TypeId>
     </column>
     <column id="319" parent="271" name="sem">
       <DasType>char(2)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>2048</StateNumber>
+      <StateNumber>2070</StateNumber>
       <TypeId>1042</TypeId>
     </column>
     <column id="320" parent="271" name="year">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>2048</StateNumber>
+      <StateNumber>2070</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="321" parent="271" name="role">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>2048</StateNumber>
+      <StateNumber>2070</StateNumber>
       <TypeId>25</TypeId>
     </column>
     <foreign-key id="322" parent="271" name="teach_uid_fkey">
       <ColNames>uid</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16928</ObjectId>
-      <StateNumber>2048</StateNumber>
+      <ObjectId>16962</ObjectId>
+      <StateNumber>2070</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16906</RefTableId>
+      <RefTableId>16940</RefTableId>
     </foreign-key>
     <foreign-key id="323" parent="271" name="teach_ccode_fkey">
       <ColNames>ccode</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16933</ObjectId>
-      <StateNumber>2048</StateNumber>
+      <ObjectId>16967</ObjectId>
+      <StateNumber>2070</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16913</RefTableId>
+      <RefTableId>16947</RefTableId>
     </foreign-key>
     <index id="324" parent="271" name="teach_pkey">
       <ColNames>uid
@@ -4656,9 +4656,9 @@ ccode
 sem
 year</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16926</ObjectId>
+      <ObjectId>16960</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2048</StateNumber>
+      <StateNumber>2070</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default
@@ -4673,10 +4673,10 @@ pg_catalog</CollationParentNames>
     </index>
     <key id="325" parent="271" name="teach_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16927</ObjectId>
+      <ObjectId>16961</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2048</StateNumber>
-      <UnderlyingIndexId>16926</UnderlyingIndexId>
+      <StateNumber>2070</StateNumber>
+      <UnderlyingIndexId>16960</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

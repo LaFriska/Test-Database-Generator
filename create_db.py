@@ -1,5 +1,6 @@
 import json
 import util
+import random
 
 courses = json.load(open("courses.json"))
 
@@ -46,7 +47,37 @@ for course in courses:
         level = util.getCourseLevel(ccode)
         sqlFile.write(f"INSERT INTO course (ccode, name, level) VALUES ('{ccode}', '{util.sanitize(name)}', {level});" + "\n")
 
-conv = json.load(open("randomConveners.json"))
+
+conv = json.load(open("randomConveners.json", 'r')) #There are 1724 conveners. Conveners have uid starting with 9254
+tutors = json.load(open("randomTutors.json", 'r')) #There are 1024 tutors. Tutors have uid starting with 2368
+
+CHeader = 92540000
+THeader = 23680000
+
+comment = """
+
+--Insertions for conveners. 
+
+"""
+sqlFile.write(comment)
+
+for i in range(len(conv)):
+    sqlFile.write(f"INSERT INTO staff (uid, name) VALUES ('{CHeader + i}', '{util.sanitize(conv[i])}');" + "\n")
+
+comment = """
+
+--Insertions for tutors. 
+
+"""
+sqlFile.write(comment)
+
+for i in range(len(tutors)):
+    sqlFile.write(f"INSERT INTO staff (uid, name) VALUES ('{THeader + i}', '{util.sanitize(tutors[i])}');" + "\n")
+
+#def addRandomisedTeach(year, sem):
+#    idArray = []
+#    for course in courses:
+
 
 sqlFile.close()
 
