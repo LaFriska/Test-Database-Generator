@@ -1,4 +1,5 @@
 import json
+import util
 
 courses = json.load(open("courses.json"))
 
@@ -38,7 +39,12 @@ sqlFile = open('testdb.sql', 'w')
 #Writes initial statements.
 sqlFile.write(initial)
 
-
+for course in courses:
+    if len(course["CourseCode"]) == 8:
+        ccode = course["CourseCode"]
+        name  = course["Name"]
+        level = util.getCourseLevel(ccode)
+        sqlFile.write(f"INSERT INTO course (ccode, name, level) VALUES ('{ccode}', '{util.sanitize(name)}', {level});" + "\n")
 
 sqlFile.close()
 
